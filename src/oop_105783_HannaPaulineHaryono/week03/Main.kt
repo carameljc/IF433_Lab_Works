@@ -19,4 +19,15 @@ fun main() {
 
     w.damage = 9999 // Harus dipaksa jadi 1000
     println("Weapon: ${w.name}, Damage: ${w.damage}, Tier: ${w.tier}")
+
+    println("\n=== TUGAS 2: PLAYER ===")
+    val player = Player("Knight99")
+
+    // player.xp // Jika di-uncomment akan merah/error karena xp bersifat private
+
+    player.addXp(50)
+    println("Level saat ini: ${player.level}")
+
+    player.addXp(60) // Total XP jadi 110, memicu pesan Level Up ke level 2
+    println("Level saat ini: ${player.level}")
 }
