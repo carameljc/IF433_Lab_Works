@@ -10,4 +10,13 @@ fun main() {
     e.increasePerformance()
 
     println("Pajak yang harus dibayar: ${e.tax}")
+
+    println("\n=== TUGAS 1: WEAPON ===")
+    val w = Weapon("Excalibur")
+
+    w.damage = -50  // Harus gagal & print peringatan (damage tetap 0)
+    println("Damage saat ini: ${w.damage}")
+
+    w.damage = 9999 // Harus dipaksa jadi 1000
+    println("Weapon: ${w.name}, Damage: ${w.damage}, Tier: ${w.tier}")
 }
