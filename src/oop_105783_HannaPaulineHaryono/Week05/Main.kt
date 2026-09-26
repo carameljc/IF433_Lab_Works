@@ -34,4 +34,14 @@ fun main() {
 
     val luasLingkaran = mathHelper.hitungLuas(7.0)
     println("Luas lingkaran (jariJari=7.0): $luasLingkaran")
+
+    println("\n=== Testing Sistem Pembayaran ===")
+    val eWallet = EWallet(accountName = "Hanna", balance = 50000.0)
+    val creditCard = CreditCard(accountName = "Hanna", limit = 100000.0)
+
+    val daftarPembayaran: List<PaymentMethod> = listOf(eWallet, creditCard)
+
+    for (payment in daftarPembayaran) {
+        payment.processPayment(75000.0)
+    }
 }
