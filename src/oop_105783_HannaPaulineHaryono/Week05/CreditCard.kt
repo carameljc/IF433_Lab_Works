@@ -1,7 +1,5 @@
 package oop_105783_HannaPaulineHaryono.Week05
 
-package oop_105783_HannaPaulineHaryono.Week05
-
 class CreditCard(accountName: String, val limit: Double) : PaymentMethod(accountName) {
 
     var usedAmount: Double = 0.0
