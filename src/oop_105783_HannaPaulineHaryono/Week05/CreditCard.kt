@@ -1,0 +1,17 @@
+package oop_105783_HannaPaulineHaryono.Week05
+
+package oop_105783_HannaPaulineHaryono.Week05
+
+class CreditCard(accountName: String, val limit: Double) : PaymentMethod(accountName) {
+
+    var usedAmount: Double = 0.0
+
+    override fun processPayment(amount: Double) {
+        if (usedAmount + amount <= limit) {
+            usedAmount += amount
+            println("[$accountName] Pembayaran sebesar $amount berhasil menggunakan CreditCard. Total terpakai: $usedAmount / $limit")
+        } else {
+            println("[$accountName] Transaksi ditolak. Limit tidak mencukupi. Terpakai: $usedAmount / $limit")
+        }
+    }
+}
