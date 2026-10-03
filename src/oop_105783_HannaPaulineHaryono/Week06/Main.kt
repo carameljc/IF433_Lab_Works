@@ -1,9 +1,8 @@
 package oop_105783_HannaPaulineHaryono.Week06
 
-// Fungsi ini Decoupled! Tidak peduli kelas aslinya apa.
 fun processCheckout(method: PaymentMethod, amount: Double) {
     println("-> Memulai checkout...")
-    method.pay(amount) // Dynamic polymorphism in action
+    method.pay(amount)
 }
 
 fun main() {
@@ -19,4 +18,9 @@ fun main() {
     println("\n=== TESTING CHECKOUT ===")
     processCheckout(method = pay1, amount = 50000.0)
     processCheckout(method = pay2, amount = 150000.0)
+
+    println("\n=== SMART HOME DEVICES ===")
+    val lamp = SmartLamp(id = "D001", name = "Ruang Tamu")
+    val speaker = SmartSpeaker(id = "D002", name = "Google Nest Dapur")
+    val cctv = SmartCCTV(id = "D003", name = "Ezviz Garasi")
 }
