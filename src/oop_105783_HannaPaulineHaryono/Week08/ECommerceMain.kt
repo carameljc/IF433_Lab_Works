@@ -25,4 +25,6 @@ fun main() {
         }
         println("--------------------------")
     }
+
+    println("=== PIPELINE SELESAI ===")
 }
