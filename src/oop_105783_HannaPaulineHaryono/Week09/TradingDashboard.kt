@@ -11,6 +11,8 @@ fun main() {
         TradeLog("ETHUSDT", "SHORT", 5, -1.8, "OPEN")
     )
 
-    // Pipeline 1: hanya transaksi CLOSED
     val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
+
+    // Pipeline 2: winning trades
+    val winningTrades = closedTrades.filter { it.roe > 0 }
 }
