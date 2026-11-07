@@ -21,8 +21,12 @@ fun main() {
         .sortedByDescending { it.roe }
         .map { "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)" }
 
-    // Pipeline 5: worst performers (minus paling besar di atas)
     val worstPerformersString = losingTrades
         .sortedBy { it.roe }
         .map { "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)" }
+
+    // Pipeline tambahan: pasangan koin unik (OPEN maupun CLOSED)
+    val uniquePairs = tradeHistory
+        .map { it.pair }
+        .toSet()
 }
