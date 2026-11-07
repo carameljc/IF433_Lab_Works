@@ -13,6 +13,8 @@ fun main() {
 
     val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
 
-    // Pipeline 2: winning trades
     val winningTrades = closedTrades.filter { it.roe > 0 }
+
+    // Pipeline 3: losing trades
+    val losingTrades = closedTrades.filter { it.roe <= 0 }
 }
