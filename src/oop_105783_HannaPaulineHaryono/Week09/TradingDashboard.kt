@@ -10,4 +10,7 @@ fun main() {
         TradeLog("BTCUSDT", "LONG", 20, 3.4, "OPEN"),
         TradeLog("ETHUSDT", "SHORT", 5, -1.8, "OPEN")
     )
+
+    // Pipeline 1: hanya transaksi CLOSED
+    val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
 }
